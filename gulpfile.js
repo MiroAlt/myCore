@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-
 var jshint = require('gulp-jshint');
 var changed = require('gulp-changed');
 var plumber = require('gulp-plumber');
@@ -10,9 +9,6 @@ var SRC = 'app/js/*.js';
 var DEST = 'dist/js';
 
 
-
-gulp.task('default', ['serve']);
-
 // Static Server + watching less/html files
 gulp.task('serve', ['less'], function (){
 
@@ -20,7 +16,7 @@ gulp.task('serve', ['less'], function (){
         server: "./app"
     });
 
-    gulp.watch('app/less/*.less', ['less']);
+    gulp.watch('app/less/**/*.less', ['less']);
     gulp.watch('app/*.html').on('change', browserSync.reload);
 });
 
@@ -31,7 +27,6 @@ gulp.task('less', function () {
         .pipe(gulp.dest("app/css"))
         .pipe(browserSync.stream());
 });
-
 
 
 /* Minify css */

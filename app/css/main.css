@@ -1,3 +1,46 @@
+/* Media queries */
+/*
+USE
+@media @tablet {
+  footer {
+    width: 768px;
+  }
+}
+@media @desktop {
+  footer {
+    width: 940px;
+  }
+}
+*/
+/**
+	attach an opacity to any color (especially from @variable), after calling this mixin, use @resultAlphaColor as a result:
+	{
+	 	.alphaColor(@text-color, 0.2);
+		color: @resultAlphaColor;
+	}
+**/
+/**
+	cross browser simple linear gradient
+**/
+/* Gradient Mixin - https://webdesign.tutsplus.com/tutorials/making-gradients-easier-with-less-mixins--cms-24072  */
+/*
+As mentioned, we’re only required to specify the gradient type and the colors, for example:
+.gradient(linear; #2BC0E4, #EAECC6);
+Notice that each parameter should be separated with a ;. We use a comma to list colors and vendor prefixes.
+
+If you would like to customize the color stop you could write:
+.gradient(linear; #2BC0E4, #EAECC6 30%);
+
+Changing the gradient direction should be done with an angle value instead of its keyword counterpart:
+.gradient(linear; #2BC0E4, #EAECC6 30%; 180deg);
+
+The following is an example in which we create a radial gradient:
+.gradient(circle; #2BC0E4, #EAECC6);
+
+Generating a repeating gradient? No problemo:
+.gradient(repeating-linear; #085078, #2BC0E4 25px, #EAECC6 50px);
+In this case, make sure you adjust the background-size accordingly to see the desired result.
+*/
 /* Mini reset */
 html,
 body,
@@ -74,84 +117,110 @@ th {
 }
 body {
   background-color: #f1f3f5;
+  font-weight: normal;
+  color: #1c1a20;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  padding: 16px 16px 0 16px /* increasing gap for mobiles */;
 }
 /* components */
-a.menu-link {
+header {
+  /* Responsive bit */
+  /* MENU BURGER */
+}
+@media only screen and (min-width: 769px) {
+  header .nav-bar {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: space-between;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+}
+header a.menu-link {
   float: right;
   display: block;
   padding: 1em;
 }
-nav[role="navigation"] {
+header nav[role="navigation"] {
   clear: both;
   transition: all 0.3s ease-out;
   overflow: hidden;
   max-height: 0;
 }
-nav[role="navigation"].active {
+header nav[role="navigation"].active {
   max-height: 15em;
 }
-nav[role="navigation"] ul {
+header nav[role="navigation"] ul {
   margin: 0;
   padding: 0;
   border-top: 1px solid #808080;
 }
-nav[role="navigation"] ul li a {
+header nav[role="navigation"] ul li a {
   display: block;
   padding: 0.8em;
   border-bottom: 1px solid #808080;
   color: black;
 }
-/* Responsive bit */
 @media screen and (min-width: 48.25em) {
-  a.menu-link {
+  header a.menu-link {
     display: none;
   }
-  nav[role="navigation"] {
+  header nav[role="navigation"] {
     max-height: none;
   }
-  nav[role="navigation"] ul {
+  header nav[role="navigation"] ul {
     margin: 0 0 0 -0.25em;
     border: 0;
   }
-  nav[role="navigation"] li {
+  header nav[role="navigation"] li {
     display: inline-block;
     margin: 0 0.25em;
   }
-  nav[role="navigation"] li a {
+  header nav[role="navigation"] li a {
     border: 0;
   }
 }
-.content {
+header .content {
   height: 600px;
   background: whitesmoke;
 }
-/* MENU BURGER */
-.menu-link {
+header .menu-link {
   width: 30px;
   cursor: pointer;
   height: 26px;
 }
-.menu-link.active .menu-icon .line.top {
+header .menu-link.active .menu-icon .line.top {
   top: 12px;
   transform: rotate(45deg);
   transition-delay: 0s, 0.3s;
 }
-.menu-link.active .menu-icon .line.middle {
+header .menu-link.active .menu-icon .line.middle {
   background-color: transparent;
   transition-delay: 0.3s;
 }
-.menu-link.active .menu-icon .line.bottom {
+header .menu-link.active .menu-icon .line.bottom {
   top: 12px;
   transform: rotate(-45deg);
   transition-delay: 0s, 0.3s;
 }
-.menu-link .menu-icon {
+header .menu-link .menu-icon {
   display: inline-block;
   height: 100%;
   position: relative;
   width: 30px;
 }
-.menu-link .menu-icon .line {
+header .menu-link .menu-icon .line {
   position: absolute;
   display: block;
   height: 2px;
@@ -160,7 +229,7 @@ nav[role="navigation"] ul li a {
   transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transform: translate3d(0, 0, 0);
 }
-.menu-link .menu-icon .line.top {
+header .menu-link .menu-icon .line.top {
   top: 2px;
   transition-property: top, -webkit-transform;
   transition-property: top, transform;
@@ -171,12 +240,12 @@ nav[role="navigation"] ul li a {
   -webkit-transition-delay: 0.3s, 0s;
   transition-delay: 0.3s, 0s;
 }
-.menu-link .menu-icon .line.middle {
+header .menu-link .menu-icon .line.middle {
   top: 12px;
   transition-duration: 0s;
   transition-delay: 0.3s;
 }
-.menu-link .menu-icon .line.bottom {
+header .menu-link .menu-icon .line.bottom {
   top: 22px;
   transition-property: top, -webkit-transform;
   transition-property: top, transform;
