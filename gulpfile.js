@@ -1,19 +1,73 @@
 var gulp = require('gulp');
+
+var jshint = require('gulp-jshint');
+var changed = require('gulp-changed');
+var plumber = require('gulp-plumber');
+var cleancss = require('gulp-clean-css');
 var less = require('gulp-less');
-//var browserSync = require('browser-sync').create();
-//var reload = browser-sync.reload();
-var path = require('path');
-var LessAutoprefix = require('less-plugin-autoprefix');
-var autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] });
-
-//// CONTINUE HERE
-/*https://www.youtube.com/watch?v=9d9756j2pq8*/
+var browserSync = require('browser-sync').create();
+var SRC = 'app/js/*.js';
+var DEST = 'dist/js';
 
 
-gulp.task('less', function () {
-    return gulp.src('app/less/**/*.less')
-        .pipe(less({
-            plugins: [autoprefix]
-        }))
-        .pipe(gulp.dest('app/css'));
+
+gulp.task('default', ['serve']);
+
+// Static Server + watching less/html files
+gulp.task('serve', ['less'], function (){
+
+    browserSync.init({
+        server: "./app"
+    });
+
+    gulp.watch('app/less/*.less', ['less']);
+    gulp.watch('app/*.html').on('change', browserSync.reload);
 });
+
+/* Compile less into CSS & auto-inject into browsers */
+gulp.task('less', function () {
+    return gulp.src("app/less/*.less")
+        .pipe(less())
+        .pipe(gulp.dest("app/css"))
+        .pipe(browserSync.stream());
+});
+
+
+
+/* Minify css */
+gulp.task('cleancss', function () {
+
+    return gulp.src('app/css/*.css')
+
+        .pipe(cleancss({
+            keepSpecialComments: 1
+        }))
+        .pipe(gulp.dest('dist/css'))
+
+});
+
+gulp.task('changed', function () {
+    return gulp.src(SRC)
+        .pipe(plumber())
+        .pipe(changed(DEST))
+        .pipe(gulp.dest(DEST));
+});
+
+/*jshint*/
+gulp.task('jshint', function () {
+    gulp.src('app/js/**/*.js')
+    .pipe(plumber())
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});
+
+
+gulp.task('watch', function () {
+    gulp.watch(SRC, ['cleancss'])
+});
+
+
+
+
+
+

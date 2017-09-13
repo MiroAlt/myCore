@@ -1,17 +1,40 @@
 {
   "name": "chatamir",
   "version": "1.0.0",
-  "description": "",
+  "description": "Create folder\r get in terminal - navigate to folder and run",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Miro Alt",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
+    "gulp-changed": "^3.1.0",
+    "gulp-clean-css": "^3.8.0",
+    "gulp-jshint": "^2.0.4",
     "gulp-less": "^3.3.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.1.0",
+    "jshint": "^2.9.5",
     "less-plugin-autoprefix": "^1.5.1"
-  }
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp-changed": "^3.1.0",
+    "gulp-less": "^3.3.2",
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.4",
+    "jshint": "^2.9.5",
+    "less-plugin-autoprefix": "^1.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiroAlt/chataMir.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MiroAlt/chataMir/issues"
+  },
+  "homepage": "https://github.com/MiroAlt/chataMir#readme"
 }
