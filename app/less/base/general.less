@@ -42,5 +42,32 @@ body {
   color: @brand-text;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
-  padding: 2*@unit 2*@unit 0 2*@unit/* increasing gap for mobiles */
+  padding: 2*@unit 2*@unit 0 2*@unit; /* increasing gap for mobiles */
+
+  @media @tablet {
+  padding: 0;
+  }
+}
+
+section {
+
+  @media @tablet {
+    padding: 10*@unit 0;
+  }
+
+}
+
+h2 {
+  font-size: 40px;
+}
+#map-canvas {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#gooMap{
+  width: 100%;
+  height: 500px;
+  margin: 50px auto;
 }

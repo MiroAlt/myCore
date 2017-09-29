@@ -1,11 +1,33 @@
 header {
 
+  .logo{
+    background-color: @brand-light;
+    @media @tablet {
+      position: relative;
+      left: 10%;
+      padding: 2*@unit;
+      border-bottom: @unit solid @brand-primary;
+      margin-bottom: -3*@unit;
+      width: 250px;
+    }
+
+    img {
+
+      @media @tablet {
+        width: 100%;
+        padding: 0 2*@unit 2*@unit 2*@unit;
+      }
+    }
+  }
+
   .nav-bar {
+    margin-bottom: @unit;
 
     @media @tablet {
       .display-flex();
       .justify-content(space-between);
       .align-items(center);
+      margin-bottom: 0;
     }
   }
 
@@ -139,4 +161,9 @@ header {
       }
     }
   }
+}
+.header-content {
+  background: url(../img/bg-mir-winter.jpg) center/cover no-repeat;
+  height: 600px;
+  border-top: @unit solid @brand-primary;
 }

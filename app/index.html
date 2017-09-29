@@ -34,9 +34,10 @@
     <link href="../css/main.css" rel="stylesheet">
 </head>
 <body>
+
     <header>
         <div class="nav-bar">
-            <a href=""><img src="img/chata-mir-logo.svg" alt="Chata Mír" class="logo"></a>
+            <a class="logo" href=""><img src="img/chata-mir-logo.svg" alt="Chata Mír"></a>
             <a href="#menu" class="menu-link">
             <span class="menu-icon">
                 <span class="line top"></span>
@@ -60,7 +61,46 @@
         </div>
     </header>
 
+    <main>
+        <section>
+            <h2>Ubytování</h2>
+        </section>
+        <section>
+            <h2>Galerie</h2>
+        </section>
+        <section>
+            <h2>Kontakt</h2>
+            <iframe src="https://snazzymaps.com/embed/19014" width="100%" height="600px" style="border:none;"></iframe>
+
+            <div id="gooMap">
+                <div id="map-canvas"></div>
+            </div>
+            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+            <script>
+                function initialize() {
+                    var myLatlng = new google.maps.LatLng(50.669811, 15.718311);
+                    var mapOptions = {
+                        zoom: 17,
+                        center: myLatlng
+                    };
+                    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+                    var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                        title: 'Here it is!'
+                    });
+                }
+
+                google.maps.event.addDomListener(window, 'load', initialize);
+
+            </script>
+        </section>
+
+    </main>
+
 
     <script src="../js/main.js"></script>
+    http://livedemo00.template-help.com/wordpress_54792/
 </body>
 </html>
