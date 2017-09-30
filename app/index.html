@@ -57,50 +57,55 @@
         </div>
 
         <div class="header-content">
-
+            <h1>Vítejte v Krkonoších na Hrnčířských boudách, na Chatě Mír, situované na poloviční cestě mezi Sněžkou a Černou Horou.</h1>
         </div>
     </header>
 
     <main>
-        <section>
-            <h2>Ubytování</h2>
-        </section>
-        <section>
-            <h2>Galerie</h2>
-        </section>
+        <div class="container">
+            <section>
+                <h2>Úvod</h2>
+                <h3>Podtitulek k textům</h3>
+                <p>Chata Mír se nachází ve výšce 1080 metrů nad mořem, na hranicích katastrů obcí Pec pod Sněžkou a Černý Důl.</p>
+                <p>Chata Mír je ideálním výchozím bodem v létě pro horskou turistiku, na výlety do zajímavých míst Krkonoš, nebo na vyjížďky na horských kolech po značených cyklistických trasách.</p>
+                <p>V zimě jsou v dosahu jak udržované běžecké tratě „Krkonošské magistrály“, tak i vleky <a href="http://leto.skiresort.cz/">lyžařského areálu SKI PEC a.s.</a>, který je největším lyžařským střediskem ve východní části Krkonoš.</p>
+                <p>Kvalita lyžařských terénů a služeb poskytovaných v tomto lyžařském areálu byla při kategorizaci oceněna 5-ti hvězdičkami.</p>
+                <p>Je zde k dispozici sedačková lanovka a 10 vleků, z toho 2 s umělým osvětlením pro večerní provoz.</p>
+                <p>40% sjezdových tratí je pokryto technickým sněhem.</p>
+            </section>
+            <section>
+                <h2>Ubytování D</h2>
+                <p>A​‌B​‌C​‌D​‌Đ​‌E​‌F​‌G​‌H​‌I​‌J​‌K​‌L​‌M​‌N​‌O​‌P​‌Q​‌R​‌S​‌Š​‌T​‌U​‌V​‌W​‌X​‌Y​‌Z​‌Ž​‌a​‌b​‌c​‌d​‌e​‌f​‌g​‌h​‌i​‌j​‌k​‌l​‌m​‌n​‌o​‌p​‌q​‌r​‌s​‌š​‌t​‌u​‌v​‌w​‌x​‌y​‌z​‌ž​‌1​‌2​‌3​‌4​‌5​‌6​‌7​‌8​‌9​‌0​‌‘​‌?​‌’​‌“​‌!​‌”​‌(​‌%​‌)​‌[​‌#​‌]​‌{​‌@​‌}​‌/​‌&​‌\​‌<​‌-​‌+​‌÷​‌×​‌=​‌>​‌®​‌©​‌$​‌€​‌£​‌¥​‌¢​‌:​‌;​‌,​‌.​‌*</p>
+            </section>
+            <section>
+                <h2>Galerie</h2>
+            </section>
+        </div>
         <section>
             <h2>Kontakt</h2>
-            <iframe src="https://snazzymaps.com/embed/19014" width="100%" height="600px" style="border:none;"></iframe>
 
-            <div id="gooMap">
-                <div id="map-canvas"></div>
-            </div>
-            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-            <script>
-                function initialize() {
-                    var myLatlng = new google.maps.LatLng(50.669811, 15.718311);
-                    var mapOptions = {
-                        zoom: 17,
-                        center: myLatlng
-                    };
-                    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-                    var marker = new google.maps.Marker({
-                        position: myLatlng,
-                        map: map,
-                        title: 'Here it is!'
-                    });
-                }
 
-                google.maps.event.addDomListener(window, 'load', initialize);
-
-            </script>
         </section>
+        <div class="google-map">
+            <iframe src="https://snazzymaps.com/embed/19014" width="100%" height="600px" style="border:none;"></iframe>
+        </div>
 
     </main>
+    <footer>
+        <div class="container">
+        <div class="contact">
+            <address><img src="../img/address.svg" alt=""><span> Chata Mír, Černý Důl 180, 5439&nbsp;44</span></address>
+            <p class="phone"><img src="../img/phone.svg" alt=""><a href="tel:+420 499 896 342">+420 499 896 342</a></p>
+            <p class="mail"><img src="../img/mail.svg" alt=""><a href="mailto:hrncirskeboudy@tiscali.cz">hrncirskeboudy@tiscali.cz</a></p>
+        </div>
+        <p class="copyright">© Chata Mír - Krkonoše (Pec pod Sněžkou, Jánské Lázně, Černý Důl)</p>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="../img/top.svg" alt=""></button>
 
 
     <script src="../js/main.js"></script>
-    http://livedemo00.template-help.com/wordpress_54792/
 </body>
 </html>

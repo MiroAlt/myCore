@@ -117,13 +117,11 @@ Generating a repeating gradient? No problemo:
 In this case, make sure you adjust the background-size accordingly to see the desired result.
 */
 
-.font-size(@font-size: 15){
-  @pxFontValue: (@font-size / 10);
-  @pxLineValue: (@font-size / 10 * 1.5);
-  font-size: @font-size * 1px;
-  line-height: @font-size * 1.5 * 1px;
-  font-size: ~"@{pxFontValue}rem";
-  line-height: ~"@{pxLineValue}rem";
+.font-size(@sizeValue) {
+	@remValue: @sizeValue;
+	@pxValue: (@sizeValue * 10);
+	font-size: ~"@{pxValue}px";
+	font-size: ~"@{remValue}rem";
 }
 
 .box-shadow (@string) {
