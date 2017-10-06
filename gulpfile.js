@@ -33,7 +33,6 @@ gulp.task('less', function () {
 gulp.task('cleancss', function () {
 
     return gulp.src('app/css/*.css')
-
         .pipe(cleancss({
             keepSpecialComments: 1
         }))
@@ -62,6 +61,8 @@ gulp.task('watch', function () {
 });
 
 
+// Default task
+gulp.task('default', ['serve','less', 'watch']);
 
 
 
