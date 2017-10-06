@@ -1,111 +1,93 @@
-<!DOCTYPE html>
-<html lang="cs">
+<!doctype html>
+<html class="no-js" lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="language" content="cs">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="copyright" content="Miroslava a Karel Šulcovi">
-    <meta name="description" content="Chata Mír - Krkonoše - Pec pod Sněžkou, Jánské Lázně, Černý Důl - Ubytování - ubytování v Krkonoších || Chata Mír se nachází ve výšce 1080 metrů nad mořem, na hranicích katastrů obcí Pec pod Sněžkou a Černý Důl.">
-    <meta name="author" content="miro.alt(@)hotmail.com">
-    <title>Ubytování | Chata Mír - Pec pod Sněžkou, Jánské Lázně, Černý Důl - ubytování v Krkonoších</title>
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="&nbsp;"/>
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="../css/main.css" rel="stylesheet">
+    <title>Front End Baseplate</title>
+    <meta name="description" content="Page description (Max 155 characters)">
+
+    <link rel="icon" type="image/png" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--<script src="/assets/js/modernizr.js"></script>-->
+
+    <!-- twitter card data (https://dev.twitter.com/docs/cards, https://dev.twitter.com/docs/cards/large-image-summary-card) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@publisher_handle">
+    <meta name="twitter:creator" content="@author_handle"><!-- if page has an author (like a blog post), pass in twitter handle -->
+    <meta name="twitter:title" content="Page Title (Max 70 characters)">
+    <meta name="twitter:description" content="Page description (Max 200 characters)">
+    <meta name="twitter:image:src" content="/assets/img/meta/share.png"><!-- share image, min dimensions: 280x150, file size < 8MB -->
+
+    <!-- open graph data -->
+    <meta property="og:title" content="Page Title (Max 70 characters)">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://www.example.com/"><!-- current page URL -->
+    <meta property="og:image" content="/assets/img/meta/share.png"><!-- share image, min dimensions: 1200x630, file size < 8MB -->
+    <meta property="og:description" content="Page description">
+    <meta property="og:site_name" content="Site Name, i.e. Engage">
+    <meta property="article:published_time" content="2013-09-17T05:59:00+01:00"><!-- if entry is is time sensitive (e.g. news), pass this info through -->
+    <meta property="article:modified_time" content="2013-09-16T19:08:47+01:00"><!-- if entry is is time sensitive (e.g. news), pass this info through -->
+    <meta property="article:section" content="Article Section"><!-- The section of your website to which the article belongs, such as 'Lifestyle' or 'Sports' -->
+    <meta property="article:tag" content="Article Tag"><!-- An array of keywords relevant to the article -->
+
 </head>
 <body>
 
-    <header>
-        <div class="nav-bar">
-            <a class="logo" href=""><img src="img/chata-mir-logo.svg" alt="Chata Mír"></a>
-            <a href="#menu" class="menu-link">
-            <span class="menu-icon">
-                <span class="line top"></span>
-                <span class="line middle"></span>
-                <span class="line bottom"></span>
-            </span>
-            </a>
-            <nav id="menu" role="navigation">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+<!--[if lte IE 9]>
+<div class="outdated-browser-wrapper">
+    <div class="outdated-browser">
+        You are using an <strong>outdated</strong> browser. Please <a href="http://outdatedbrowser.com/">upgrade your browser</a> to improve your viewing experience.
+    </div>
+</div>
+<![endif]-->
+
+<div id="site-wrapper" class="site-wrapper">
+
+    <header id="site-header" class="site-header" role="banner">
+
+        <div class="container">
+
+            <h1 class="h2"><a href="/">Front End Baseplate</a></h1>
+
         </div>
 
-        <div class="header-content">
-            <h1>Vítejte v Krkonoších na Hrnčířských boudách, na Chatě Mír, situované na poloviční cestě mezi Sněžkou a Černou Horou.</h1>
-        </div>
     </header>
 
-    <main>
+    <div id="site-content" class="site-content">
+
+        <article role="main">
+            <div class="container">
+                <p>Front End Baseplate</p>
+
+                <p><a href="/assets/styleguide.html">View styleguide</a></p>
+            </div>
+        </article>
+
+
+    </div>
+
+    <footer id="site-footer" class="site-footer">
         <div class="container">
-            <section>
-                <h2>Úvod</h2>
-                <h3>Podtitulek k textům</h3>
-                <p>Chata Mír se nachází ve výšce 1080 metrů nad mořem, na hranicích katastrů obcí Pec pod Sněžkou a Černý Důl.</p>
-                <p>Chata Mír je ideálním výchozím bodem v létě pro horskou turistiku, na výlety do zajímavých míst Krkonoš, nebo na vyjížďky na horských kolech po značených cyklistických trasách.</p>
-                <p>V zimě jsou v dosahu jak udržované běžecké tratě „Krkonošské magistrály“, tak i vleky <a href="http://leto.skiresort.cz/">lyžařského areálu SKI PEC a.s.</a>, který je největším lyžařským střediskem ve východní části Krkonoš.</p>
-                <p>Kvalita lyžařských terénů a služeb poskytovaných v tomto lyžařském areálu byla při kategorizaci oceněna 5-ti hvězdičkami.</p>
-                <p>Je zde k dispozici sedačková lanovka a 10 vleků, z toho 2 s umělým osvětlením pro večerní provoz.</p>
-                <p>40% sjezdových tratí je pokryto technickým sněhem.</p>
-            </section>
-            <section>
-                <h2>Ubytování D</h2>
-                <p>A​‌B​‌C​‌D​‌Đ​‌E​‌F​‌G​‌H​‌I​‌J​‌K​‌L​‌M​‌N​‌O​‌P​‌Q​‌R​‌S​‌Š​‌T​‌U​‌V​‌W​‌X​‌Y​‌Z​‌Ž​‌a​‌b​‌c​‌d​‌e​‌f​‌g​‌h​‌i​‌j​‌k​‌l​‌m​‌n​‌o​‌p​‌q​‌r​‌s​‌š​‌t​‌u​‌v​‌w​‌x​‌y​‌z​‌ž​‌1​‌2​‌3​‌4​‌5​‌6​‌7​‌8​‌9​‌0​‌‘​‌?​‌’​‌“​‌!​‌”​‌(​‌%​‌)​‌[​‌#​‌]​‌{​‌@​‌}​‌/​‌&​‌\​‌<​‌-​‌+​‌÷​‌×​‌=​‌>​‌®​‌©​‌$​‌€​‌£​‌¥​‌¢​‌:​‌;​‌,​‌.​‌*</p>
-            </section>
-            <section>
-                <h2>Galerie</h2>
-            </section>
-        </div>
-        <section>
-            <h2>Kontakt</h2>
-
-
-
-        </section>
-        <div class="google-map">
-            <iframe src="https://snazzymaps.com/embed/19014" width="100%" height="600px" style="border:none;"></iframe>
-        </div>
-
-    </main>
-    <footer>
-        <div class="container">
-        <div class="contact">
-            <address><img src="../img/address.svg" alt=""><span> Chata Mír, Černý Důl 180, 5439&nbsp;44</span></address>
-            <p class="phone"><img src="../img/phone.svg" alt=""><a href="tel:+420 499 896 342">+420 499 896 342</a></p>
-            <p class="mail"><img src="../img/mail.svg" alt=""><a href="mailto:hrncirskeboudy@tiscali.cz">hrncirskeboudy@tiscali.cz</a></p>
-        </div>
-        <p class="copyright">© Chata Mír - Krkonoše (Pec pod Sněžkou, Jánské Lázně, Černý Důl)</p>
+            <p>&copy; 2017 MiroAlt</p>
         </div>
     </footer>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="../img/top.svg" alt=""></button>
+</div>
 
 
-    <script src="../js/main.js"></script>
+<!--script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+</script-->
+
 </body>
 </html>

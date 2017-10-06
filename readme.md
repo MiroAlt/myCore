@@ -1,18 +1,3 @@
-# Chata Mir
+![alt text](https://mirophotography.files.wordpress.com/2016/11/malogo1.png?w=115 "Miro Alt")
 
-
-Create folder
-get in terminal - navigate to folder and run
-
-``` npm init ```
-``` npm install gulp --save-dev ```
-
-> create folders
-
-app -- css, dist (distribution) atc.
-
-in the root folder create gulpfile.js
-type ``` var gulp = requre('gulp'); ```
-
-##Dependencies
-gulp
+## Front End Baseplate
