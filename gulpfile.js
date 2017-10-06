@@ -60,7 +60,6 @@ gulp.task('watch', function () {
     gulp.watch(SRC, ['cleancss'])
 });
 
-
 // Default task
 gulp.task('default', ['serve','less', 'watch']);
 

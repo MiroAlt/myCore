@@ -19,6 +19,7 @@
     "gulp-plumber": "^1.1.0",
     "jshint": "^2.9.5",
     "less-plugin-autoprefix": "^1.5.1"
+
   },
   "dependencies": {
     "browser-sync": "^2.18.13",
