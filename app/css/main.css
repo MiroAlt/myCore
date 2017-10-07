@@ -68,6 +68,15 @@ h6 {
   margin: 0;
   padding: 0;
 }
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 h1,
 h2,
 h3,
@@ -75,7 +84,17 @@ h4,
 h5,
 h6 {
   font-weight: normal;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+}
+@media only screen and (min-width: 769px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 16px;
+  }
 }
 ul {
   list-style: none;
@@ -85,15 +104,6 @@ input,
 select,
 textarea {
   margin: 0;
-}
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
 }
 img,
 embed,
@@ -277,6 +287,10 @@ footer .contact .phone a {
   background-color: transparent;
   width: 50px;
   height: 50px;
+}
+.svg-icon {
+  width: 64px;
+  height: 64px;
 }
 @font-face {
   font-family: 'exo-bold';
